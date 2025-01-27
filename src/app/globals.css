@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000; 
+  --foreground: #ededed; }
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #ededed;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.shimmer {
+  animation: shimmer 3s infinite ease-in-out;
+  background-color: rgba(3, 3, 3, 0.8); /* Light blue glitter */
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 170, 255, 0.5), 0 0 12px rgba(0, 170, 255, 0.3);
+}
+
+
+
+.glitter-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 4px;
+  box-sizing: border-box;
+  /* The blue glow effect with blur for softness */
+  box-shadow: 0 0 30px 15px rgba(25, 31, 41, 0.856),
+              0 0 60px 30px rgba(25, 31, 41, 0.856),
+              0 0 90px 45px rgba(25, 31, 41, 0.856);
+  animation: irregularBorder 5s ease-in-out infinite;
+  background: rgba(0, 170, 255, 0.3); 
+  filter: blur(8px); 
+}
+
+@keyframes irregularBorder {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px 15px rgba(25, 31, 41, 0.856),
+                0 0 60px 30px rgba(25, 31, 41, 0.856),
+                0 0 90px 45px rgba(25, 31, 41, 0.856);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px 18px rgba(25, 31, 41, 0.856),
+                0 0 70px 35px rgba(25, 31, 41, 0.856),
+                0 0 100px 50px rgba(25, 31, 41, 0.856);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  animation: typing 3s steps(15) forwards, blink-caret 0.7s step-end infinite;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background-color: #333;
+    color: #fff;
+  }
+}
