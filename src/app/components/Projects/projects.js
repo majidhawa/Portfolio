@@ -79,7 +79,7 @@ const Projects = () => {
                   ✖
                 </button>
                 <video controls muted className="w-[320px] h-[180px] max-w-full">
-                  <source src="/image/investika.mp4" type="video/mp4" />
+                  <source src="/investika.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
