@@ -17,14 +17,14 @@ const About = () => {
             alt="Hawa Majid"
             layout="fill"
             objectFit="cover"
-            objectPosition="top" // Keeps head visible, crops bottom
+            objectPosition="top" 
             className="rounded-2xl"
           />
         </div>
 
-        {/* About Text */}
+     
         <div className="w-full md:w-[50%] px-4 sm:px-6 md:px-8 text-center sm:text-left">
-          {/* New About Me Heading */}
+
           <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-4">
             About Me
           </h2>
@@ -40,7 +40,7 @@ const About = () => {
             and everyday life, while finding inspiration in novels and lifelong learning.
           </p>
 
-          {/* Social Links */}
+    
           <div className="flex justify-start items-center gap-6 mt-6">
             <a
               href="https://github.com/majidhawa"

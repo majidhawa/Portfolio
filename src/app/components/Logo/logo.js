@@ -32,8 +32,6 @@ const Logo = () => {
             Hawa Majid
           </span>
         </h5>
-
-        {/* Rotating Titles */}
         <div className="overflow-hidden whitespace-nowrap w-full mt-2">
           <h5 className="text-yellow-300 text-2xl sm:text-3xl lg:text-4xl inline-block">
             {titles[currentIndex]}

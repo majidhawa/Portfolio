@@ -26,12 +26,12 @@ const Projects = () => {
               Investika
             </h3>
             <p className="text-left text-l text-white">
-            A gamified mobile platform designed to introduce youth to 
-            the world of investment. The app simplifies complex financial concepts, 
-            making them accessible and engaging through interactive challenges and simulations.
-            By empowering young people with the knowledge and confidence to explore investment 
-             opportunities, Investika fosters financial literacy and promotes smarter decision-making 
-             for future wealth creation.
+              A gamified mobile platform designed to introduce youth to 
+              the world of investment. The app simplifies complex financial concepts, 
+              making them accessible and engaging through interactive challenges and simulations.
+              By empowering young people with the knowledge and confidence to explore investment 
+              opportunities, Investika fosters financial literacy and promotes smarter decision-making 
+              for future wealth creation.
             </p>
 
             <div className="flex justify-center pt-4 space-x-4">
@@ -64,6 +64,28 @@ const Projects = () => {
             </div>
           </div>
 
+          {isVideoOpen && (
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+              onClick={() => setIsVideoOpen(false)} 
+            >
+       
+              <div className="relative bg-gray-900 p-4 rounded-lg w-[340px] h-[220px]" onClick={(e) => e.stopPropagation()}>
+  
+                <button
+                  className="absolute top-2 right-2 bg-red-600 text-white text-xl rounded-full px-2 py-1"
+                  onClick={() => setIsVideoOpen(false)} 
+                >
+                  ✖
+                </button>
+                <video controls muted className="w-[320px] h-[180px] max-w-full">
+                  <source src="/image/investika.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          )}
+
           <div className="p-4 border-yellow-600 rounded-lg shadow-[0_0_10px_rgba(255,215,0,0.6)] cursor-pointer transition-transform transform hover:scale-95 hover:bg-blue-900 duration-300">
             <div className="mx-auto flex justify-center  p-4">
               <Image
@@ -77,12 +99,12 @@ const Projects = () => {
               Fun Trivia
             </h3>
             <p className="text-left text-white text-l">
-            The JavaScript Quiz Game is an interactive web-based application designed to test users' 
-            knowledge through a series of dynamically managed multiple-choice questions. This project 
-            demonstrates key JavaScript concepts, such as real-time DOM manipulation, event handling, 
-            and data management, making it an excellent way to enhance web development skills. The quiz 
-            game dynamically presents questions to users, allowing them to select answers while keeping 
-            track of their progress and score.
+              The JavaScript Quiz Game is an interactive web-based application designed to test users' 
+              knowledge through a series of dynamically managed multiple-choice questions. This project 
+              demonstrates key JavaScript concepts, such as real-time DOM manipulation, event handling, 
+              and data management, making it an excellent way to enhance web development skills. The quiz 
+              game dynamically presents questions to users, allowing them to select answers while keeping 
+              track of their progress and score.
             </p>
             <div className="flex justify-center pt-4 space-x-4">
               <a
@@ -149,20 +171,6 @@ const Projects = () => {
                   className="hover:bg-yellow-600 transition-colors rounded-full"
                 />
               </a>
-              {/* <a
-                href=" "
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition transform"
-              >
-                <Image
-                  src="/icons/vercel.svg"
-                  width={25}
-                  height={25}
-                  alt="Vercel"
-                  className="hover:bg-yellow-600 transition-colors rounded-full"
-                />
-              </a> */}
             </div>
           </div>
 
